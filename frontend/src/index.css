@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Modam;
+}
+/* ============================================
+   MADAM FONT FACES
+   ============================================ */
+@font-face {
+  font-family: Modam;
+  src: url("../src/assets/fonts/Modam-Regular.ttf");
+}
+
+/* ============================================
+   BASE STYLES (NO !IMPORTANT)
+   ============================================ */
+@layer base {
+  html {
+    direction: rtl;
+    font-family: "Madam", sans-serif;
+  }
+
+  body {
+    @apply bg-white text-text-primary antialiased text-body-lg;
+    font-family: "Madam", sans-serif;
+  }
+}
+
+@keyframes searchDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-dropdown {
+  animation: searchDropdown 0.2s ease-out;
+}
+
+/* Horizontal scroll - smooth on iOS touch devices */
+.scroll-x-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+  }
+}
