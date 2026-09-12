@@ -1,4 +1,4 @@
-# Kh Rahman - Full-Stack React + Express Application
+ Full-Stack React + Express Application
 
 This repository contains:
 
